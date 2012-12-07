@@ -60,6 +60,23 @@ or in **ArcMenu.java**
 arcLayout.setChildSize(50);
 arcLayout.setArc(0.0f, 300.0f);    
 ```
+
+##DOCUMENTATION
+
+It's possible to generate the documentation that come with the source code using the ``javadoc``
+utility in the following way
+
+```
+$ javadoc -d doc/ \
+    -linkoffline http://d.android.com/reference /opt/android-sdk-linux_86/docs/reference/ \
+    -classpath /opt/android-sdk-linux_86/platforms/android-17/android.jar \
+    -sourcepath library/src/ \
+    com.capricorn
+```
+
+the documentation will be in the ``doc/`` directory (obviously you have to substitute ``/opt/android-sdk-linux_x86``,
+that is the path to my installation of the Android SDK, with your).
+
 ##TODO
 
 Use attribute like ``custom:childSize`` directly into ``RayMenu`` and ``ArcMenu`` XML declaration. Also
